@@ -8,20 +8,28 @@ body {
   font-weight: 800;
 }
 
+.para {
+  font-size: 22px;
+}
+
+/* Other Sol. - applying more specificity
+p.small-para {
+  font-size: 14px;
+  font-weight: 800;
+} */
+
+/* comes after the first class, greater specificity */
 .small-para {
   font-size: 14px;
   font-weight: 800;
 }
 
-.para {
-  font-size: 22px;
-}
-
-.confirm {
+/* Other Sol. #2 - id has greater specificity
+ #confirm-button {
   background: green;
   color: white;
   font-weight: bold;
-} 
+}  */
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -29,14 +37,28 @@ body {
   font-size: 20px;
 }
 
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
-}
+/* moving down .buttom, to get more specific */
+.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
+}  
 
 div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
+}
+
+/* Other Sol. #3 - is more specific
+.text.child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
+} */
+
+div.child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
 }
